@@ -56,5 +56,17 @@ services.forEach(service => {
  
     servicesSection.append(newService);
 });
+
+
+let divElm = document.createElement("div");
+divElm.classList.add("facilities");
+divElm = `
+    <h2>${facilities.headline}</h2>
+    
+    
+    
+    `
+
+    
  
  
