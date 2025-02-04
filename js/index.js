@@ -6,7 +6,7 @@ services.forEach(service => console.log(service.headline))
 let heroSection = document.querySelector(".hero");
 let newHeroSection = document.createElement("section");
  
-let heroHeadline = document.createElement("h2");
+let heroHeadline = document.createElement("h1");
 heroHeadline.textContent = hero.headline;
 newHeroSection.append(heroHeadline);
  
@@ -39,7 +39,7 @@ services.forEach(service => {
     serviceImage.src = service.illustration;
     newService.append(serviceImage);
     
-    let serviceHeadline = document.createElement("h3");
+    let serviceHeadline = document.createElement("h2");
     serviceHeadline.textContent = service.headline;
     newService.append(serviceHeadline);
  
@@ -58,14 +58,26 @@ services.forEach(service => {
 });
 
 
-let divElm = document.createElement("div");
-divElm.classList.add("facilities");
-divElm = `
-    <h2>${facilities.headline}</h2>
-    
-    
-    
-    `
+let facilitySection = document.querySelector(".facilities");
+ 
+let facilityHeadline = document.createElement("h2")
+facilityHeadline.textContent = facilities.headline;
+facilitySection.append(facilityHeadline)
+ 
+facilities.options.forEach(option => {
+    let newFacility = document.createElement("section");
+    newFacility.classList.add("facilites");
+    newFacility.innerHTML = `
+        <img src="${option.icon}">
+        <h3>${option.headline}</h3>
+        <p>${option.text}</p>
+       
+        `;
+ 
+    facilitySection.append(newFacility);
+});
+ 
+
 
     
  
