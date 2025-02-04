@@ -126,9 +126,34 @@ advantages.forEach(advantage => {
  advantagesSection.append(newAdvantage);
 });
 
+let footerSection = document.querySelector(".footer");
+let footerText = document.createElement("p");
+footerText.textContent = footer.text;
 
-
-
-    
+let footerHeadline = document.createElement("h1");
+footerHeadline.textContent = footer.headline;
  
  
+footerSection.append(footerText, footerHeadline);
+ 
+footer.info.forEach(foot => {
+    let newFooter = document.createElement("section");
+    newFooter.classList.add("footer-section");
+ 
+    let footerHeadline = document.createElement("h2");
+    footerHeadline.textContent = foot.headline;
+ 
+    let ul = document.createElement("ul");
+ 
+    foot.li.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+    });
+ 
+
+    footerSection.append(newFooter, footerHeadline, ul);
+});
+ 
+
+
