@@ -76,7 +76,57 @@ facilities.options.forEach(option => {
  
     facilitySection.append(newFacility);
 });
+
+let sitesSection = document.querySelector(".sites");
  
+let sitesHeadline = document.createElement("h2")
+let sitesText = document.createElement("p")
+let sitesBtn = document.createElement("button")
+sitesHeadline.textContent = sites.headline;
+sitesText.textContent = sites.text;
+sitesBtn.innerHTML = `
+
+    <img src="${sites.btnicon}">
+    <p>Start</p>
+`
+sitesSection.append(sitesHeadline, sitesText, sitesBtn);
+
+sites.places.forEach(place => {
+    let newSite = document.createElement("section");
+    newSite.classList.add("site--section");
+    newSite.innerHTML = `
+        <img src="${place.img}">
+        <h2>${place.name}</h2>
+        <p>${place.city}</p>
+        <a href="#">View the Site</a>
+        
+       
+        `;
+ 
+    sitesSection.append(newSite);
+});
+let advantagesSection = document.querySelector(".advantages");
+
+let advantageHeadline = document.createElement("h2")
+advantageHeadline.textContent = "Our Advantages";
+advantagesSection.append(advantageHeadline)
+
+
+advantages.forEach(advantage => {
+    let newAdvantage = document.createElement("section");
+    newAdvantage.classList.add("advantage--section");
+    newAdvantage.innerHTML = `
+        <img src="${advantage.icon}">
+        <h3>${advantage.headline}</h3>
+        <p>${advantage.text}</p>
+        
+       
+        `;
+ 
+ advantagesSection.append(newAdvantage);
+});
+
+
 
 
     
