@@ -115,4 +115,25 @@ let footer = {
         },
     ]
 };
+
+let footerBot = {
+    text: "EazyCamper. All rights reserved",
+    nav: [
+        {
+            li: "About",
+        },
+        {
+            li: "Site Map",
+        },
+        {
+            li: "Terms",
+        },
+        {
+            li: "Privacy Policy",
+        },
+        {
+            li: "Teams",
+        },
+    ]
+};
  

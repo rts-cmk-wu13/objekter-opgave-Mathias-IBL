@@ -154,6 +154,28 @@ footer.info.forEach(foot => {
 
     footerSection.append(newFooter, footerHeadline, ul);
 });
+
+let footerBotSection = document.querySelector(".footer");
+let footerBotText = document.createElement("p");
+footerBotText.textContent = footerBot.text;
+footerBotSection.append(footerBotText);
+
+footerBot.nav.forEach(footBot => {
+    let newFooterBot = document.createElement("section");
+    newFooterBot.classList.add("footBot--section");
+    newFooterBot.innerHTML = `
+       <p>${footBot.li}</p>
+        
+       
+        `;
+ footerBotSection.append(newFooterBot);
+});
+
+
+
+
+
+
  
 
 
