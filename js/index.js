@@ -130,29 +130,27 @@ let footerSection = document.querySelector(".footer");
 let footerText = document.createElement("p");
 footerText.textContent = footer.text;
 
-let footerHeadline = document.createElement("h1");
-footerHeadline.textContent = footer.headline;
+let footerHeadline1 = document.createElement("h1");
+footerHeadline1.textContent = footer.headline;
  
  
-footerSection.append(footerText, footerHeadline);
+footerSection.append(footerText, footerHeadline1);
  
 footer.info.forEach(foot => {
     let newFooter = document.createElement("section");
     newFooter.classList.add("footer-section");
  
-    let footerHeadline = document.createElement("h2");
-    footerHeadline.textContent = foot.headline;
- 
+    let footerHeadline2 = document.createElement("h2");
+    footerHeadline2.textContent = foot.headline;
+    
     let ul = document.createElement("ul");
- 
     foot.li.forEach(item => {
         let li = document.createElement("li");
         li.textContent = item;
         ul.appendChild(li);
     });
- 
-
-    footerSection.append(newFooter, footerHeadline, ul);
+    
+    footerSection.append(newFooter, footerHeadline2, ul);
 });
 
 let footerBotSection = document.querySelector(".footer");
@@ -166,7 +164,6 @@ footerBot.nav.forEach(footBot => {
     newFooterBot.innerHTML = `
        <p>${footBot.li}</p>
         
-       
         `;
  footerBotSection.append(newFooterBot);
 });
